@@ -9,7 +9,7 @@ One of the things that's frustrating about having lots of open source projects i
 
 # StandardJS
 
-![StandardJS logo](https://cdn.rawgit.com/feross/standard/master/sticker.svg)
+<a href="https://standardjs.com" style="float: right; padding: 0 0 20px 20px;"><img src="https://cdn.rawgit.com/feross/standard/master/sticker.svg" alt="Standard JavaScript" width="100" align="right"></a>
 
 Let's say we've come across [StandardJS](https://standardjs.com/) (which we have) and we want to apply it to all of our projects (which we do); how do we go about this? Obviously we have to locally clone every project, run StandardJS to reformat the files, run tests on the results, commit the changes, and submit a pull request. And then when we realise that we forgot to add the StandardJS badge to each and every `README` file, we do the whole dance again.
 
