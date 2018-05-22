@@ -7,9 +7,13 @@ One of the things that's frustrating about having lots of open source projects i
 
 <!--snip-->
 
+# StandardJS
+
+![StandardJS logo](https://cdn.rawgit.com/feross/standard/master/sticker.svg)
+
 Let's say we've come across [StandardJS](https://standardjs.com/) (which we have) and we want to apply it to all of our projects (which we do); how do we go about this? Obviously we have to locally clone every project, run StandardJS to reformat the files, run tests on the results, commit the changes, and submit a pull request. And then when we realise that we forgot to add the StandardJS badge to each and every `README` file, we do the whole dance again.
 
-Even if we avoid (for now) the difficulty of making lots of changes to lots of projects, how do we ensure that any new project we create follows whatever new conventions we've adopted?
+Even if we put to one side (at least for now) the difficulty of making lots of changes to lots of projects, how do we ensure that any new project we create follows whatever new conventions we've adopted?
 
 # Occam's Razor
 
