@@ -27,7 +27,7 @@ All of which means we've moved the problem along a little; whereas before we wer
 
 I've considered various ways to capture these kinds of rules, once they've been decided on. They could be written in a notebook and kept in the top drawer of your desk. But one criteria I'd like is to make the rules shareable and discussable. Which means that even if the only person discussing the rules was myself *with* myself, it would be handy to have a space where the [advantages and disadvantages of using, say, StandardJS instead of ESLint directly](https://standardjs.com/#i-disagree-with-rule-x-can-you-change-it), could be weighed up. (Not to mention whether or not to use semicolons.) So whilst some kind of shared document would be great, a Git repo would be even better.
 
-## Specifying Rules
+# Specifying Rules
 
 Assuming this knowledge is captured in a repository with all the benefits of issue-tracking and comments, what form should the rules actually take?
 
@@ -35,7 +35,7 @@ They could just be written in prose, such as *always use an `AUTHORS` file*, and
 
 ![](https://github.com/todogroup/repolinter/raw/master/docs/images/P_RepoLinter01_logo_only.png)
 
-### Repo Linter
+## Repo Linter
 
 Repo Linter contains a set of generic tests, such as *check that a certain file exists* or *check that a set of files contain the specified text*. These tests can then be used to create more specific *rules* such as *does a README.md file exist?* or *do all of the source files have a copyright message at the top?* Rules are then further combined into *rulesets* to create the exact collection of policies that you want to enforce for your projects.
 
@@ -75,12 +75,12 @@ This is pretty powerful, but Repo Linter goes further and allows us to specify r
 
 So now we have a way to express our rules in a simple JSON file. All that's left is to apply them against a repo.
 
-## The Answer is Docker (Now...What was the Question?)
+# The Answer is Docker (Now...What was the Question?)
 
 The easiest way to get these rules into a reusable form is to create a Docker image that bundles both Repo Linter and a configuration file for some set of specific rules. I've created a basic Docker image that installs Repo Linter and its dependencies, and adds some simple rules to check for a license, `AUTHORS` and `README` files. There are also some instructions to help create new images based on this base, so that more specific rules can be added. The repo is [markbirbeck/docker-repolinter](https://github.com/markbirbeck/docker-repolinter) and the Docker image it generates is in Docker Hub at [markbirbeck/docker-repolinter](https://hub.docker.com/r/markbirbeck/docker-repolinter/).
 
 You can also skip this and go straight to the repo I've set up to do exactly what I've described in this post--capture rules and have a place where they can be discussed. That repo is at [markbirbeck/my-repolinter](https://github.com/markbirbeck/my-repolinter) and it should be very straightforward to copy it and create a Docker image that captures your own policies.
 
-## Where Next?
+# Where Next?
 
 In a future post I'll look at how we might go about *generating* any files that we detect are missing.
