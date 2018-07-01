@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Don't Install Node Until You've Read This (Or, *How to Run Node the Docker Way*)"
+title:  "Don't Install Node Until You've Read This (Or, How to Run Node the Docker Way)"
 date:   2018-07-01 13:30:01 +0000
 ---
 
