@@ -6,15 +6,17 @@ date:   2018-07-01 13:30:01 +0000
 
 We need Node for some application or other--perhaps we're creating a microservice or just want to follow along with a tutorial.
 
-But most places you start with suggest that the first step is to install Node for your operating system. Perhaps you're on a Mac and now you have to start thinking about whether to install Homebrew or MacPorts.
+But most places you start with suggest that the first step is to install Node for your operating system. Perhaps you're on a Mac so now you have to start thinking about whether you should also install Homebrew or MacPorts.
 
 Or you're on Ubuntu so you head in the `apt-get` direction...except before you know it, to get the latest version you find yourself using `curl` to pipe some script to your shell.
 
-Windows? Could just use the Windows installer but as with macOS you ponder whether it's time to embrace the Chocalatey or Scoop package managers.
+Windows? You could just use the Windows installer but as with macOS you ponder whether it's time to embrace the Chocalatey or Scoop package managers.
 
 In this blog post we'll look at how skipping over all of this and heading straight to a Docker environment makes it much easier to manage your Node applications and development workflow, and whats more gets you going with best practices right from the start.
 
 <!--snip--->
+
+# Docker First
 
 Whichever route we go with installing Node the OS-specific way, we now have two problems; the first is that the way that we install Node is different on each platform, and damn, that's annoying. And number two we now have Node installed *globally* on our laptop. Why so sad? Well now if we want to use different versions of Node for different projects we have to faff about with something like `nvm`. (And if you were planning on running a Python project it's the same story, with `virtualenv`.)
 
