@@ -21,6 +21,8 @@ description: > # this means to ignore newlines until "baseurl:"
   the semantic web, Node, Polymer, Docker and AWS.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
+disqus:
+  shortname: you-know-for-devs
 twitter_username: youknowfordevs
 github_username:  markbirbeck
 google_analytics: UA-2021717-4
