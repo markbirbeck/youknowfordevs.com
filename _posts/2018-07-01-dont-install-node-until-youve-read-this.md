@@ -28,6 +28,8 @@ So assuming that you now have Docker, let's get a development environment set up
 
 # Running Node
 
+![Node Logo](/images/uploads/node.png)
+
 First, create a new directory for your project:
 
 ```shell
