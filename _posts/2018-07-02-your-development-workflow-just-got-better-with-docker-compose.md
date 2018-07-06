@@ -145,7 +145,7 @@ The background as to why is that if we use the first version of the command whic
 
 However the Bash shell *does* handle the whole `SIGTERM` dance correctly, and will cleanly shut down our server when it receives `[CTRL]+C`. So all we need to do is run our server inside a shell.
 
-If you need (or want) to understand this in more detail then [search online for something along the lines of `pid 1 docker node`](https://www.google.co.uk/search?q=pid+1+docker+node) and you'll find a number of articles. If you just want to cut to the chase then read the section [Handling Kernel Signals](https://github.com/nodejs/docker-node/blob/master/docs/BestPractices.md#handling-kernel-signals) in the [best practises guidance for using Node in Docker](https://github.com/nodejs/docker-node/blob/master/docs/BestPractices.md).
+If you need (or want) to understand this in more detail then [search online for something along the lines of "pid 1 docker node"](https://www.google.co.uk/search?q=pid+1+docker+node) and you'll find a number of articles. If you just want to cut to the chase then read the section [Handling Kernel Signals](https://github.com/nodejs/docker-node/blob/master/docs/BestPractices.md#handling-kernel-signals) in the [best practises guidance for using Node in Docker](https://github.com/nodejs/docker-node/blob/master/docs/BestPractices.md).
 
 ## Multiple Services
 
