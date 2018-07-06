@@ -18,6 +18,8 @@ In this blog post we'll look at how skipping over all of this and heading straig
 
 # Docker First
 
+![Docker Logo](/images/uploads/docker.png)
+
 Whichever route we go with installing Node the OS-specific way, we now have two problems; the first is that the way that we install Node is different on each platform, and damn, that's annoying. And number two we now have Node installed *globally* on our laptop. Why so sad? Well now if we want to use different versions of Node for different projects we have to faff about with something like `nvm`. (And if you were planning on running a Python project it's the same story, with `virtualenv`.)
 
 So do yourself a favour and [get Docker installed](https://docs.docker.com/install/). True, how you install Docker will also be different for different platforms--Ubuntu is slightly different to Mac and Windows. But this initial effort will repay you later because now you'll have a *standard* way to install Node, Ruby, Python, TensorFlow, R...whatever language you're using for your projects--or perhaps more likely nowadays, *languages*--just got way easier to manage.
