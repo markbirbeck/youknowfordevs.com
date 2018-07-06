@@ -88,6 +88,8 @@ It's tempting of course to want to 'always use the latest'; after all, the lates
 
 ## Base OS
 
+![Alpine Logo](/images/uploads/alpine-linux.svg)
+
 The second thing to note about the Node Docker image selection, is that we've used the `alpine` version of the image which uses [Alpine Linux](https://alpinelinux.org/about/) as the base operating system. This is the lightest of the Node images, and only provides the bare minimum of an operating system to get Node running--we're most likely creating microservices, after all.
 
 You've probably come across the `alpine` project but if you haven't, take a look; it's being used right across the Docker ecosystem to keep Docker images light.
