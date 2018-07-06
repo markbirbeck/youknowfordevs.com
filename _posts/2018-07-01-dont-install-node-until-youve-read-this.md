@@ -169,7 +169,7 @@ Assuming all is well, we can now carry on with whatever project or tutorial we w
 
 There are a lot more ways that we can improve our develoment environment; we can:
 
-* bring in Docker Compose to shorten our command lines;
+* [bring in Docker Compose to shorten our command lines](/2018/07/02/your-development-workflow-just-got-better-with-docker-compose.html);
 * add more directory mappings so that modules installed with `npm install` stay *inside* our container;
 * create test containers that include runners like Mocha or TAP;
 * launch local Nginx servers that will mirror our live deployments.
