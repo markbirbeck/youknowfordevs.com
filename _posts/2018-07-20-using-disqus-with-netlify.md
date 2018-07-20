@@ -18,7 +18,7 @@ First, you write all of your posts in Markdown and keep them in a Git repo, and 
 
 Well, second, whilst you might be used to running your SSG locally and then pushing the generated HTML to somewhere like S3 or a CDN, with Netlify that's done for you, by connecting Netlify to your GitHub, GitLab or Bitbucket repo.
 
-Yawn...you can do that with GitHub's pages, you tell me.
+Yawn...you can do that with GitHub Pages, you tell me.
 
 But here is where it gets interesting; Netlify has built a whole set of features into its build process that can help you manage the *generated* blog without having to modify the repo itself. You can add forms and logins to your blog, for example.
 
@@ -28,7 +28,7 @@ And if you want to take the site beyond a blog and into application territory yo
 
 # Using Netlify Snippets
 
-![Disqus Logo](/images/uploads/disqus.jpeg)
+![Disqus Logo](/images/uploads/disqus.svg)
 
 The easiest way to get Disqus going in Netlify is to create a snippet. Simply paste the code from Disqus's instructions for the [universal embed code](https://help.disqus.com/installation/universal-embed-code).
 
