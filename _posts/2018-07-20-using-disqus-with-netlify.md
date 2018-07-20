@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Using Disqus with Netlify"
-date:   2018-07-20 12:37:01 +0000
+date:   2018-07-20 11:37:01 +0000
 ---
 
 To use Disqus on Netlify you can either let Netlify do the work of embedding the required snippet, or get your static-site generator (SSG) to take the strain.
@@ -12,7 +12,7 @@ To use Disqus on Netlify you can either let Netlify do the work of embedding the
 
 ![Netlify Logo](/images/uploads/netlify.svg)
 
-Netlify is great. In the search for the ideal blogging platform it has the perfect architecture.
+Netlify is great. In the [search for the ideal blogging platform](/2012/02/24/choosing-a-blogging-platform/) it has the perfect architecture.
 
 First, you write all of your posts in Markdown and keep them in a Git repo, and then use a static-site generator (SSG) to build your blog. Of course you do, you might say...where's the news?
 
