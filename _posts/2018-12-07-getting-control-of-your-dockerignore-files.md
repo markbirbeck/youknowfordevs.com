@@ -207,7 +207,9 @@ In fact, the patterns that we need in our `.dockerignore` file to specify what w
 
 ## Problems With Approach #3
 
-Although this is my preferred solution and solves a lot of problems, there is still a weakness. Although we'll get notified by the build process if we are missing an important rule from our `.dockerignore` file, we *won't* be notified if our rules are too liberal. So in our example above, if we later decide not to copy the `LICENSE` file when building, there is nothing to tell us that we can remove the pattern from `.dockerignore`.
+Although this is my preferred solution and solves a lot of problems, there are still a couple of weaknesses. Although we'll get notified by the build process if we are missing an important rule from our `.dockerignore` file, we *won't* be notified if our rules are too liberal. So in our example above, if we later decide not to copy the `LICENSE` file when building, there is nothing to tell us that we can remove the pattern from `.dockerignore`.
+
+And also, we still need to remember not to leave anything in the `app` directory that might get copied in. As it happens, the example I gave earlier of a `.env` file (in Approach #1) is now less of an issue since it is best kept in the root directory anyway.
 
 # Conclusion
 
