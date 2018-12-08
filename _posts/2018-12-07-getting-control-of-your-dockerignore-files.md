@@ -4,7 +4,7 @@ title:  "Getting Control Of Your .dockerignore Files"
 date:   2018-12-07 09:04:01 +0000
 ---
 
-Every now and then I'll notice a file inside a Docker container that really shouldn't be there. Thankfully it's never been a `.env` file or an SSH key, but even so, any unused file or directory takes up space in the image, and makes that image slower to build and pass around. Best practice suggests using the oft-neglected `.dockerignore` file to keep our secrets secret and make sure our Docker images are as lean as possible. But this file then usually becomes a maintenance nightmare as the list of exclusions grows.
+Every now and then I'll notice a file inside a Docker container that really shouldn't be there. Thankfully it's never been a `.env` file or an SSH key, but even so, any unused file or directory takes up space in the image and makes that image slower to build and pass around. Best practice suggests using the oft-neglected `.dockerignore` file to keep our secrets secret and make sure our Docker images are as lean as possible. But this file then usually becomes a maintenance nightmare as the list of exclusions grows.
 
 This post shows how to control `.dockerignore` by indicating which files we want to *include* rather than those we want to *exclude*.
 
@@ -22,9 +22,9 @@ The rest of this post looks at how we might solve these problems.
 
 # Approach #1: Build From A Single Directory
 
-Most of the approaches I have tried in the last year or so have revolved around different ways of organising the project directories. There are lots of ways a project could be organised, but in general the approach is to try to keep the source, tests, documentation, generated files, and anything else that is part of the project, separate from each other.
+Most of the approaches I have tried in the last year or so have revolved around different ways of organising the project directories. There are lots of ways a project could be organised, but in general, the approach is to try to keep the source, tests, documentation, generated files, and anything else that is part of the project, separate from each other.
 
-As part of this separation we also want to ensure that any directories that we don't want to appear inside the Docker image get set as *peers* of the main directory that we want to include. This simply means that rather than having `app > docs` or `app > test` as our directories, we would instead have `app`, `docs` and `test` as top-level directories sitting alongside each other.
+As part of this separation, we also want to ensure that any directories that we don't want to appear inside the Docker image get set as *peers* of the main directory that we want to include. This simply means that rather than having `app > docs` or `app > test` as our directories, we would instead have `app`, `docs` and `test` as top-level directories sitting alongside each other.
 
 By having one directory that contains all of the files that will be needed in a build, and everything else kept safely apart in other directories, we at least start to lower the risk of mistakenly copying something important or unnecessary.
 
@@ -32,7 +32,7 @@ By having one directory that contains all of the files that will be needed in a 
 
 Once our directories are organised then it's a simple matter to set the Docker build context to refer to the single directory that should be included in the Docker image. By setting the context to a sub-directory we have ensured that all other directories are excluded, whether they are `.git`, `node_modules`, documentation and tests, and so on.
 
-However, the weakness with this approach is that since the build context must contain *everything* that Docker will need to build the image, that unfortunately means we need to place `Dockerfile` in our source directory too.
+However, the weakness with this approach is that since the build context must contain *everything* that Docker will need to build the image, that, unfortunately, means we need to place `Dockerfile` in our source directory too.
 
 ## Ignoring With `.dockerignore`
 
@@ -90,9 +90,9 @@ docs
 test
 ```
 
-This approach of continually growing the ignore file works and you'll find many blog posts that describe exactly what we're doing here. But it soon gets very, very tedious to keep excluding all of the files and directories that are *not* needed in the image, and after a while you'll find yourself turning a blind eye to any 'harmless' files that are exposed or that get inadvertently copied in.
+This approach of continually growing the ignore file works and you'll find many blog posts that describe exactly what we're doing here. But it soon gets very, very tedious to keep excluding all of the files and directories that are *not* needed in the image, and after a while, you'll find yourself turning a blind eye to any 'harmless' files that are exposed or that get inadvertently copied in.
 
-But that means we're back to square one again, because we can *never really be sure* that we haven't copied in something that shouldn't be there, or that the image we've created couldn't be smaller.
+But that means we're back to square one again because we can *never really be sure* that we haven't copied in something that shouldn't be there, or that the image we've created couldn't be smaller.
 
 Luckily it turns out that there is a much easier way to maintain these exclusions, and it's pretty much foolproof.
 
@@ -100,7 +100,7 @@ Luckily it turns out that there is a much easier way to maintain these exclusion
 
 As we all know, the `.dockerignore` file contains a list of file patterns to exclude. But it doesn't *just* contain that. The ignore file also contains a list of file patterns to *not* exclude.
 
-Say we have a blog full of Markdown files that we want to exclude from our image, because they will be converted to HTML beforehand and are therefore unnecessary at runtime. But let's say also that we still want to include the `README.md` file from our project because it might help anyone looking inside a running container. We could achieve this goal with the following entries in a `.dockerignore` file:
+Say we have a blog full of Markdown files that we want to exclude from our image because they will be converted to HTML beforehand and are therefore unnecessary at runtime. But let's say also that we still want to include the `README.md` file from our project because it might help anyone looking inside a running container. We could achieve this goal with the following entries in a `.dockerignore` file:
 
 ```
 # In .dockerignore
@@ -136,7 +136,7 @@ And those files should only be those that are mentioned in our `Dockerfile`.
 
 ## Only Include Those Files Referenced In `Dockerfile`
 
-Let's assume that we're building a Node app. And let's also assume that we're following best practise in our `Dockerfile` by installing all of the dependencies in one layer and our source code in another layer.
+Let's assume that we're building a Node app. And let's also assume that we're following best practice in our `Dockerfile` by installing all of the dependencies in one layer and our source code in another layer.
 
 The 'install dependencies' step might look like this:
 
@@ -174,7 +174,7 @@ We can easily add these files to our .`dockerignore` file with a 'don't exclude'
 !package.json
 ```
 
-That's it...we're done. The Docker daemon won't recieve `.git` or test directories, or `.env`, or `.gitlab-ci.yml`, or `Dockerfile`, or `docker-compose.yml` or anything else.
+That's it...we're done. The Docker daemon won't receive `.git` or test directories, or `.env`, or `.gitlab-ci.yml`, or `Dockerfile`, or `docker-compose.yml` or anything else.
 
 Now all we have to do is keep the files `.dockerignore` and `Dockerfile` in sync--i.e., ensuring that they both refer to the same paths and files--and nothing else will accidentally get into our Docker images.
 
