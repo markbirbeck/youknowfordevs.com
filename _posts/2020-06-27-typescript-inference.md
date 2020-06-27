@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Be Sure to Use TypeScript Inference"
+title:  "Let TypeScript Inference Take The Strain"
 date:   2020-06-27 15:13:00 +0000
 ---
 
@@ -50,4 +50,6 @@ You might ask whether missing off one declaration gains us much, but I would sug
 * a supercharged linter that can infer types from our code and then check that we're not doing anything dumb, and;
 * a type language that we can add as we need to, to help to resolve ambiguities.
 
-This gives us the option of a much 'ligher touch' approach to TypeScript.
+This gives us the option of a much 'lighter touch' approach to TypeScript.
+
+For more on TypeScript's type inference see [Type Inference](https://www.typescriptlang.org/docs/handbook/type-inference.html). And for a particularly clever scenario where types can be inferred from `assert()` statements, see ['asserts condition'](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-3-7.html#assertion-functions).
