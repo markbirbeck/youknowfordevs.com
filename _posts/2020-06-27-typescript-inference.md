@@ -7,7 +7,7 @@ date:   2020-06-27 15:13:00 +0000
 I was doing a code review recently and saw something like this:
 
 ```js
-const mapEventNameForDisplay = (eventName: string): string => {
+const mapEventName = (eventName: string): string => {
   switch (eventName) {
     case 'UPDATE_ABC':
       return 'ABC Updated'
