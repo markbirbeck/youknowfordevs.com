@@ -35,7 +35,7 @@ and here is exactly the same IntelliSense when the return type is omitted:
 
 ![Function intellisense without return type](/images/uploads/function-intellisense-without-return-type.png)
 
-And if we want to reassure ourselves that TypeScript is still doing the same checking, let's try to use the function where a number is required:
+And if we want to reassure ourselves that TypeScript is still doing the same checking, let's try to use the function in a position where a number is required:
 
 ```js
 const a = Math.max(mapEventName('UPDATE_ABC'), 4);
