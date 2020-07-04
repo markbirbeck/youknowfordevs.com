@@ -2,6 +2,9 @@
 layout: post
 title:  "Getting Control Of Your .dockerignore Files"
 date:   2018-12-07 09:04:01 +0000
+comments: true
+tags: 
+ - docker
 ---
 
 Every now and then I'll notice a file inside a Docker container that really shouldn't be there. Thankfully it's never been a `.env` file or an SSH key, but even so, any unused file or directory takes up space in the image and makes that image slower to build and pass around. Best practice suggests using the oft-neglected `.dockerignore` file to keep our secrets secret and make sure our Docker images are as lean as possible. But this file then usually becomes a maintenance nightmare as the list of exclusions grows.

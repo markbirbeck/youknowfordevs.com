@@ -2,6 +2,10 @@
 layout: post
 title:  "Don't Install Node Until You've Read This (Or, How to Run Node the Docker Way)"
 date:   2018-07-01 13:30:01 +0000
+comments: true
+tags: 
+ - node
+ - docker
 ---
 
 We need Node for some application or other--perhaps we're creating a microservice or just want to follow along with a tutorial.

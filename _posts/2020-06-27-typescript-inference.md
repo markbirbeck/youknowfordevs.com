@@ -2,6 +2,10 @@
 layout: post
 title:  "Let TypeScript Inference Take The Strain"
 date:   2020-06-27 15:13:00 +0000
+comments: true
+tags: 
+ - typescript
+ - javascript
 ---
 
 I was doing a code review recently and saw something like this:

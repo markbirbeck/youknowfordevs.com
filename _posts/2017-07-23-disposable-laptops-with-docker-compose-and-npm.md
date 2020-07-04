@@ -2,6 +2,10 @@
 layout: post
 title:  "Disposable Laptops With Docker Compose And NPM"
 date:   2017-07-23 15:11:01 +0000
+comments: true
+tags: 
+ - docker
+ - docker compose
 ---
 Switching laptops a lot more frequently than I would want has led over the years to my trying a variety of ways to keep track of the applications that I need to install to get up and running quickly. In this post I'll look at where I've got to with this.
 
