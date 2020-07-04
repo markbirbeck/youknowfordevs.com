@@ -3,6 +3,10 @@ layout: post
 title:  "Using _writev() to Create a Fast, Writable Stream for ElasticSearch"
 date:   2018-10-29 11:37:01 +0000
 comments: true
+tags: 
+ - elasticsearch
+ - node
+ - streams
 ---
 
 We all know how great Node streams are. But it wasn't until I recently needed to create (yet another) writable stream wrapper for ElasticSearch that I realised just how much work the streaming APIs can do for you. And in particular how powerful the `_writev()` method is.

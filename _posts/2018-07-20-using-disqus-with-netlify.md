@@ -3,6 +3,10 @@ layout: post
 title:  "Using Disqus with Netlify"
 date:   2018-07-20 11:37:01 +0000
 comments: true
+tags: 
+ - netlify
+ - disqus
+ - static site generation
 ---
 
 To use Disqus on Netlify you can either let Netlify do the work of embedding the required snippet, or get your static-site generator (SSG) to take the strain.
