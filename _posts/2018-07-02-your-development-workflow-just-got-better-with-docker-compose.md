@@ -2,6 +2,7 @@
 layout: post
 title:  "Your Development Workflow Just Got Better, With Docker Compose"
 date:   2018-07-02 13:30:01 +0000
+comments: true
 ---
 
 In a previous post we saw how to [set up our basic Node development environment using Docker](/2018/07/01/dont-install-node-until-youve-read-this.html). Our next step is reduce the size of these unwieldy `docker run` commands. This is not just because of their unwieldiness but also because if we just type them from the command-line then we don't have an easy way to share what we're doing--not just with other people but with ourselves, tomorrow, when we've inevitably forgotten what we were doing today!

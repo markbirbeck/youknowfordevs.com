@@ -2,6 +2,7 @@
 layout: post
 title:  "Using Docker and Repo Linter to Capture Project Structure Rules"
 date:   2018-05-21 16:44:01 +0000
+comments: true
 ---
 One of the things that's frustrating about having lots of open source projects is, well...having lots of open source projects. Some issues are obvious, such as how to keep projects moving along, responding to pull requests, fixing bugs and adding features. But there are plenty of less obvious things to deal with, such as how to keep a whole bunch of projects aligned once you've decided on some best practices.
 
