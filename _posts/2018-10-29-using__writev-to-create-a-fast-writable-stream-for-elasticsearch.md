@@ -245,6 +245,7 @@ As you can see, the Node streaming API has done much of the work of buffering, f
 
 ```javascript
 const stream = require('stream')
+const elasticsearch = require('elasticsearch')
 
 class ElasticsearchWritableStream extends stream.Writable {
   constructor(config, options) {
