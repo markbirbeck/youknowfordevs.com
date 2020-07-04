@@ -29,7 +29,7 @@ It's worth saying too that the CVs that looked good didn't go overboard; all the
 
 ## Attention to Detail
 
-Probably in the same vein, typos really jump out at you when you are looking at a lot of CVs. Again I'm not saying I'm right or wrong on whether this should be an important criteria, but the fact that my subsoncscious reaction was to be turned off if I saw a spelling mistake--or a technology name that had been capitalised incorrectly--shows that somewhere in our psyches this stuff counts for something.
+Probably in the same vein, typos really jump out at you when you are looking at a lot of CVs. Again I'm not saying I'm right or wrong on whether this should be an important criteria, but the fact that my subconcscious reaction was to be turned off if I saw a spelling mistake--or a technology name that had been capitalised incorrectly--shows that somewhere in our psyches this stuff counts for something.
 
 As with the previous point about looks, I'd probably see this as more relevant for front-end people.
 
@@ -41,7 +41,7 @@ But to keep with the theme of my 'initial reaction', I can't help that when I se
 
 One other thing that I hadn't expected was that I was drawn to mark people more highly if they gave some indication of the _approach_ they took to their coding and development. For example, a few people mentioned having experience with TDD, which I thought was good. That doesn't mean I'd rule out someone who didn't have TDD experience, but it's an approach that people need to be aware of.
 
-However, more importantly than TDD, only a handful indicated that they liked to get involved in code reviews and saw them as a good way to share knowledge and build a consistent and high quality codebase. Again, I would not rule out someone who didn't mention code reviews, mentoring, and so on, provided they were relativly inexperienced; but I probably _would_ rule out someone who clearly has experience, but hasn't thought to mention these things.
+However, more importantly than TDD, only a handful indicated that they liked to get involved in code reviews and saw them as a good way to share knowledge and build a consistent and high quality codebase. Again, I would not rule out someone who didn't mention code reviews, mentoring, and so on, provided they were relatively inexperienced; but I probably _would_ rule out someone who clearly has experience, but hasn't thought to mention these things.
 
 ### Approach From Technologies
 
